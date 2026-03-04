@@ -6,7 +6,7 @@ This project demonstrates a cloud-native **Data Lakehouse on AWS**, focused on t
 
 ## Architecture Overview
 
-![AWS Gold Data Lakehouse Architecture](AWS_Gold_Data_Lakehouse_Architecture_Mar_2026.png)
+![AWS Gold Data Lakehouse Architecture](AWS%20Gold%20Data%20Lakehouse%20Architecture%20Mar%202026.png)
 
 ---
 
