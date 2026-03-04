@@ -62,3 +62,9 @@ Raw financial data is streamed from the **Dukascopy API** into S3 via **Kinesis 
 - **Trino** — on-premises SQL query engine (local)
 - **AWS IAM** — role-based access control
 - **Dukascopy API** — financial market data source
+
+---
+
+## ⚠️ Disclaimer
+
+This project is currently **work in progress**. The architecture, configurations, and documentation are subject to change and have not yet been finalised.
