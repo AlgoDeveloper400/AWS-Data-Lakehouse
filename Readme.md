@@ -67,4 +67,4 @@ Raw financial data is streamed from the **Dukascopy API** into S3 via **Kinesis 
 
 ## ⚠️ Disclaimer
 
-This project is currently **work in progress**. The architecture, configurations, and documentation are subject to change and have not yet been finalised.
+This project is currently work in progress. The architecture, configurations, and documentation are subject to change and have not yet been finalised. The ML/AI model training and deployment section will not be covered in this repo as a similar setup has already been implemented in a separate repository.
