@@ -76,6 +76,6 @@ Additionally, **ML/AI Engineers** have read access to the Gold dataset to option
 
 ---
 
-## ⚠️ Disclaimer
-
-This project is currently a work in progress. The architecture, configurations, and documentation are subject to change and have not yet been finalised. The ML/AI model training and deployment section will not be covered in this repo as a similar setup has already been implemented in a separate repository.
+## Additional Information
+For further assistance, please visit my YouTube channel, I have a fully detailed video explaining how to setup the components of this repository.
+YouTube Channel: https://youtu.be/igRmHdnu1u0
