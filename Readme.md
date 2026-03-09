@@ -16,7 +16,7 @@ Raw financial data is streamed from a **Trading API/Platform** and stored as CSV
 
 From the Gold dataset, three independent query engines are available:
 
-- **QE 1 — Apache Iceberg (Cloud):** Data Engineers and Analysts query the Gold dataset via **Iceberg tables with partitioning**, enabling versioned, ACID-compliant SQL analytics directly in the cloud.
+- **QE 1 — AWS Athena (Cloud):** Data Engineers and Analysts query the Gold dataset via **Apache Iceberg tables with partitioning** using **AWS Athena**, enabling versioned, ACID-compliant serverless SQL analytics directly in the cloud.
 - **QE 2 — On-Premises Trino (Docker):** Data Engineers and Analysts can run high-performance SQL queries locally via a **Trino query engine** deployed in Docker, connecting back to the Gold S3 dataset.
 - **QE 3 — On-Premises Spark (Docker):** Data Engineers and Analysts can run large-scale distributed analytics locally via an **Apache Spark query engine** deployed in Docker, also connecting to the Gold S3 dataset.
 
@@ -45,7 +45,7 @@ Additionally, **ML/AI Engineers** have read access to the Gold dataset to option
 
 | Component | Description |
 |---|---|
-| **Apache Iceberg Tables (QE 1)** | Partitioned, versioned table format on S3 — cloud SQL querying |
+| **AWS Athena + Apache Iceberg Tables (QE 1)** | Serverless cloud SQL querying on partitioned, versioned Iceberg tables in S3 |
 | **On-Prem Trino Query Engine (QE 2)** | Local high-performance SQL analytics via Docker |
 | **On-Prem Spark Query Engine (QE 3)** | Local distributed data processing and analytics via Docker |
 | **ML/AI Model Training (Optional)** | Model training and deployment on the Gold dataset |
@@ -68,6 +68,7 @@ Additionally, **ML/AI Engineers** have read access to the Gold dataset to option
 - **AWS Glue** — serverless ETL (CSV → Parquet)
 - **AWS IAM** — role-based access control via S3 + Glue policies
 - **Apache Iceberg** — open table format with partitioning and versioning (QE 1)
+- **AWS Athena** — serverless cloud SQL query engine for Iceberg tables (QE 1)
 - **Trino** — on-premises SQL query engine via Docker (QE 2)
 - **Apache Spark** — on-premises distributed query engine via Docker (QE 3)
 - **Docker** — container runtime for on-premises query engines
