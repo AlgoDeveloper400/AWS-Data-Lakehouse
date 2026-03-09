@@ -78,4 +78,4 @@ Additionally, **ML/AI Engineers** have read access to the Gold dataset to option
 
 ## Additional Information
 For further assistance, please visit my YouTube channel, I have a fully detailed video explaining how to setup the components of this repository.
-YouTube Channel: https://youtu.be/igRmHdnu1u0
+YouTube Channel: https://www.youtube.com/@BDB5905
