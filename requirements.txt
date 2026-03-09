@@ -1,0 +1,28 @@
+# iceberg_migration.py
+boto3==1.35.0
+python-dotenv==1.0.1
+
+# iceberg_time_travel.py
+boto3==1.35.0
+python-dotenv==1.0.1
+
+# schema_evolution.py
+boto3==1.35.0
+python-dotenv==1.0.1
+
+# local_trino_time_travel.py
+trino==0.329.0
+python-dotenv==1.0.1
+
+# spark_time_travel.py
+pyspark==3.5.3
+python-dotenv==1.0.1
+
+# csv_to_parquet_glue_job.py
+boto3==1.35.0
+pyspark==3.5.3
+
+# mt5_s3_data_streamer.py
+boto3==1.35.0
+MetaTrader5==5.0.45
+python-dotenv==1.0.1

@@ -1,0 +1,99 @@
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+*.pem
+*.key
+credentials
+config
+~/.aws/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ========================
+# Jupyter Notebooks
+# ========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ========================
+# Data Files
+# ========================
+*.csv
+*.jsonl
+*.tsv
+*.xlsx
+*.xls
+data/
+raw/
+gold/
+output/
+
+# ========================
+# AWS & Terraform
+# ========================
+*.tfstate
+*.tfstate.backup
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+cdk.out/
+*.cdk.staging/
+samconfig.toml
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+
+# ========================
+# ML / AI Artefacts
+# ========================
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+models/
+checkpoints/
+
+# ========================
+# Logs & Temp Files
+# ========================
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# ========================
+# IDEs & Editors
+# ========================
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user

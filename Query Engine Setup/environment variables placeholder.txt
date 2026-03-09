@@ -1,0 +1,16 @@
+For the env file for Spark and Trino Query engine, Kindly place these variables in your env file and fill them in. The env file mut be in the Query Engine Setup folder not in the main folder, that env file in the base path is for AWS Athena.
+
+
+# AWS Credentials
+AWS_REGION=
+AWS_ACCESS_KEY=
+AWS_SECRET_KEY=
+# S3 Warehouse
+S3_WAREHOUSE_PATH=
+TRINO_HOST=localhost
+TRINO_PORT=8081
+TRINO_USER=trino
+TRINO_CATALOG=iceberg
+TRINO_SCHEMA=your aws glue database name
+
+

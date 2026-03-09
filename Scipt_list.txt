@@ -1,0 +1,14 @@
+1. mt5_s3_data_streamer.py
+2.csv_to_parquet_glue_job
+3.iceberg_migration.py
+4.schema_evolution.py
+5.iceberg_time_travel.py
+6.spark_time_travel.py
+7.local_trino_time_travel.py
+8.docker-compose.yml
+9.hive.properties
+10.iceberg.properties
+11.symbols.json
+12.env file 1 for aws athena credentials and s3 buckets
+13.env file 2 for spark and trino credentials as well as aws bucket credentials
+

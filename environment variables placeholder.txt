@@ -1,0 +1,12 @@
+This placeholder file is for AWS Athena, please ensure you create an env file on the base folder path with these credentials, please do not mix this file with the other env file with the one in the Query Engine setup folder, this is done just to isolate thing and make testing easier.
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+BUCKET=
+RAW_PREFIX=
+DATABASE=
+RAW_TABLE=
+ATHENA_REGION=
+ATHENA_OUTPUT=
+

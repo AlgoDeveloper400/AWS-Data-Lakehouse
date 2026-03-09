@@ -1,0 +1,60 @@
+services:
+
+  # ── Trino ────────────────────────────────────────────────────────────────────
+  trino:
+    image: trinodb/trino
+    container_name: trino-node
+    hostname: aws-trino
+    volumes:
+      - ./etc/catalog:/etc/trino/catalog
+    ports:
+      - "8081:8080"
+    environment:
+      JVM_OPTS: "-Xmx2G -Xms1G"
+    env_file:
+      - .env
+
+  # ── Spark Master ─────────────────────────────────────────────────────────────
+  spark-master:
+    image: apache/spark:4.0.0-scala2.13-java17-python3-r-ubuntu
+    container_name: spark-master
+    hostname: spark-master
+    entrypoint: ["/opt/spark/sbin/start-master.sh"]
+    environment:
+      - SPARK_MASTER_WEBUI_PORT=8082
+      - SPARK_NO_DAEMONIZE=true
+      # AWS credentials
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY}
+      - AWS_REGION=${AWS_REGION}
+    ports:
+      - "8082:8082"   # Spark Master UI
+      - "7077:7077"   # Spark Master port (workers connect here)
+    volumes:
+      - C:\your\base\path\AWS Data Lakehouse\Spark:/opt/spark/apps
+    env_file:
+      - .env
+
+  # ── Spark Worker ─────────────────────────────────────────────────────────────
+  spark-worker:
+    image: apache/spark:4.0.0-scala2.13-java17-python3-r-ubuntu
+    container_name: spark-worker
+    hostname: spark-worker
+    entrypoint: ["/opt/spark/sbin/start-worker.sh", "spark://spark-master:7077"]
+    environment:
+      - SPARK_WORKER_MEMORY=6g
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_WEBUI_PORT=8083
+      - SPARK_NO_DAEMONIZE=true
+      # AWS credentials
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY}
+      - AWS_REGION=${AWS_REGION}
+    ports:
+      - "8083:8083"   # Spark Worker UI
+    volumes:
+      - C:\your\base\path\AWS Data Lakehouse\Spark:/opt/spark/apps
+    depends_on:
+      - spark-master
+    env_file:
+      - .env

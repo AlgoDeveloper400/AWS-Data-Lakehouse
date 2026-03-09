@@ -1,0 +1,13 @@
+{
+  "symbols": [
+    "BTCUSD",
+    "XAUUSD",
+    "US30",
+    "US2000"
+  ],
+  "settings": {
+    "s3_prefix":          "raw",
+    "poll_interval_ms":   500,
+    "file_duration_mins": 10
+  }
+}
