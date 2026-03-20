@@ -55,9 +55,9 @@ def list_iceberg_tables():
 def get_snapshots(table):
     sql = f"""
         SELECT snapshot_id, committed_at, operation,
-               summary['added-records']   AS added,
-               summary['deleted-records'] AS deleted,
-               summary['total-records']   AS total
+               element_at(summary, 'added-records')   AS added,
+               element_at(summary, 'deleted-records') AS deleted,
+               element_at(summary, 'total-records')   AS total
         FROM {TRINO_CATALOG}.{TRINO_SCHEMA}."{table}$snapshots"
         ORDER BY committed_at
     """
